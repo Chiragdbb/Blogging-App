@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import service from '../../appwrite/config'
-import { SelectForward, RTE, Input, Button } from "../index"
+import { Select, RTE, Input, Button } from "../index"
 
 // todo: why post / how do we get post value
 function PostForm({ post }) {
@@ -82,8 +82,8 @@ function PostForm({ post }) {
         })
 
         return () => subscription.unsubscribe()
-
     }, [watch, slugTransform, setValue])
+
 
 
     return (
@@ -123,7 +123,7 @@ function PostForm({ post }) {
                         />
                     </div>
                 )}
-                <SelectForward
+                <Select
                     options={["active", "inactive"]}
                     label="Status"
                     className="mb-4"

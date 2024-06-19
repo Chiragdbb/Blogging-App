@@ -4,7 +4,7 @@ import Container from "./container/Container";
 import LogoutBtn from "./Header/LogoutBtn";
 import Logo from "./Logo";
 import Button from "./Button";
-import SelectForward from "./Select";
+import Select from "./Select"
 import PostCard from "./PostCard";
 import Protected from "./AuthLayout";
 import RTE from "./RTE";
@@ -25,7 +25,7 @@ export {
     LogoutBtn,
     Logo,
     Button,
-    SelectForward,
+    Select,
     PostCard,
     Protected,
     RTE,

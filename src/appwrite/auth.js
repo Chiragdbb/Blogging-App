@@ -17,7 +17,7 @@ export class AuthService {
             const userAccount = await this.account.create(ID.unique(), email, password, name)
             if (userAccount) {
                 // if user is created successfully, then login
-                this.login({ email, password })
+                await this.login({ email, password })
             } else {
                 return userAccount
             }
@@ -43,7 +43,7 @@ export class AuthService {
         return null;
     }
 
-    async logout(){
+    async logout() {
         try {
             return this.account.deleteSessions()
         } catch (error) {

@@ -50,7 +50,7 @@ function Login() {
                 </p>)}
                 <form onSubmit={handleSubmit(login)}>
                     <div className='space-y-5'>
-                        <input
+                        <Input
                             label="Email: "
                             placeholder='Enter your email'
                             type="email"
@@ -63,7 +63,7 @@ function Login() {
                             }
 
                         />
-                        <input
+                        <Input
                             label="Password: "
                             placeholder='Enter your password'
                             type="password"

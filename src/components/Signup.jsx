@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, matchPath, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import authService from '../appwrite/auth'
 import { useDispatch } from 'react-redux'
 import { Button, Input, Logo } from './index'
@@ -49,14 +49,14 @@ function Signup() {
 
                 <form onSubmit={handleSubmit(signup)}>
                     <div className='space-y-5'>
-                        <input
+                        <Input
                             label="Full Name: "
                             placeholder='Enter your name'
                             {...register("name", {
                                 required: true,
                             })}
                         />
-                        <input
+                        <Input
                             label="Email:"
                             type="email"
                             placeholder='Enter your email'
@@ -67,14 +67,14 @@ function Signup() {
                                 }
                             })}
                         />
-                        <input
+                        <Input
                             type="password"
                             placeholder='Enter Password'
                             {...register("password", {
                                 required: true,
                             })}
                         />
-                        <button type='submit' className='w-full'>Create Account</button>
+                        <Button type='submit' className='w-full'>Create Account</Button>
                     </div>
                 </form>
             </div>
